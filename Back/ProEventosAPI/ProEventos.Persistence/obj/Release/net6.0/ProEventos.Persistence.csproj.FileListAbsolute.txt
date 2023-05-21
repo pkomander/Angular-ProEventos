@@ -1,0 +1,17 @@
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Release\net6.0\ProEventos.Persistence.deps.json
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Release\net6.0\ProEventos.Persistence.runtimeconfig.json
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Release\net6.0\ProEventos.Persistence.dll
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Release\net6.0\ProEventos.Persistence.pdb
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Release\net6.0\ProEventos.Domain.dll
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Release\net6.0\ProEventos.Domain.pdb
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.csproj.AssemblyReference.cache
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.AssemblyInfoInputs.cache
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.AssemblyInfo.cs
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.csproj.CoreCompileInputs.cache
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.csproj.CopyComplete
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.dll
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\refint\ProEventos.Persistence.dll
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.pdb
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ProEventos.Persistence.genruntimeconfig.cache
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Release\net6.0\ref\ProEventos.Persistence.dll

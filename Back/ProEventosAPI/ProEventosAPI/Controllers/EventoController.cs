@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProEventos.Application.Contratos;
+using ProEventos.Application.Dtos;
 using ProEventos.Domain;
 using ProEventos.Persistence.Context;
 
@@ -24,8 +25,9 @@ namespace ProEventosAPI.Controllers
 
                 if(eventos == null)
                 {
-                    return NotFound("Nenhum evento encontrado.");
+                    return NoContent();
                 }
+
                 return Ok(eventos);
             }
             catch (Exception ex)
@@ -43,7 +45,7 @@ namespace ProEventosAPI.Controllers
 
                 if (evento == null)
                 {
-                    return NotFound("Nenhum evento encontrado.");
+                    return NoContent();
                 }
                 return Ok(evento);
             }
@@ -62,7 +64,7 @@ namespace ProEventosAPI.Controllers
 
                 if (evento == null)
                 {
-                    return NotFound("Eventos por tema nao encontrados.");
+                    return NoContent();
                 }
                 return Ok(evento);
             }
@@ -73,7 +75,7 @@ namespace ProEventosAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Evento model)
+        public async Task<IActionResult> Post([FromBody] EventoDto model)
         {
 
             try
@@ -82,7 +84,7 @@ namespace ProEventosAPI.Controllers
 
                 if (evento == null)
                 {
-                    return BadRequest("Erro ao tentar adicionar evento.");
+                    return NoContent();
                 }
                 return Ok(evento);
             }
@@ -93,7 +95,7 @@ namespace ProEventosAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Evento model)
+        public async Task<IActionResult> Put(int id, [FromBody] EventoDto model)
         {
             try
             {
@@ -101,7 +103,7 @@ namespace ProEventosAPI.Controllers
 
                 if (evento == null)
                 {
-                    return BadRequest("Erro ao tentar atualizar evento.");
+                    return NoContent();
                 }
                 return Ok(evento);
             }
@@ -122,7 +124,7 @@ namespace ProEventosAPI.Controllers
                 {
                     return BadRequest("Erro ao tentar deletar evento.");
                 }
-                return Ok("Deletado");
+                return Ok( new { message = "Deletado" });
             }
             catch (Exception ex)
             {

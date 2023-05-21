@@ -75,3 +75,5 @@ D:\ProEventos\Back\ProEventosAPI\ProEventosAPI\bin\Debug\net6.0\ProEventos.Persi
 D:\ProEventos\Back\ProEventosAPI\ProEventosAPI\bin\Debug\net6.0\ProEventos.Application.pdb
 D:\ProEventos\Back\ProEventosAPI\ProEventosAPI\bin\Debug\net6.0\ProEventos.Domain.pdb
 D:\ProEventos\Back\ProEventosAPI\ProEventosAPI\bin\Debug\net6.0\ProEventos.Persistence.pdb
+D:\ProEventos\Back\ProEventosAPI\ProEventosAPI\bin\Debug\net6.0\AutoMapper.dll
+D:\ProEventos\Back\ProEventosAPI\ProEventosAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
