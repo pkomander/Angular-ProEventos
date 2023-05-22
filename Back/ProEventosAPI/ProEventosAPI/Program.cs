@@ -22,8 +22,10 @@ builder.Services.AddDbContext<DataContext>(opts => opts.UseSqlServer(builder.Con
 
 //injetando dependencias
 builder.Services.AddScoped<IEventosService, EventoService>();
+builder.Services.AddScoped<ILoteService, LoteService>();
 builder.Services.AddScoped<IGeralPersist, GeralPersist>();
 builder.Services.AddScoped<IEventoPersist, EventoPersist>();
+builder.Services.AddScoped<ILotePersist, LotePersist>();
 
 //injetando o AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
