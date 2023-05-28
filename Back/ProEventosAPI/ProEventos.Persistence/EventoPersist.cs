@@ -21,7 +21,7 @@ namespace ProEventos.Persistence
             _context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
 
-        public async Task<Evento[]> GetAllEventosAsync(bool includePalestrante = false)
+        public async Task<Evento[]> GetAllEventosAsync(int userId, bool includePalestrante = false)
         {
             IQueryable<Evento> query = _context.Eventos.Include(e => e.Lote).Include(e => e.RedesSociais);
 
@@ -31,12 +31,13 @@ namespace ProEventos.Persistence
                 query = query.Include(e => e.PalestrantesEventos).ThenInclude(pe => pe.Palestrante);
             }
 
-            query = query.OrderBy(e => e.Id);
+            //AsNoTracking = nao guarda em cache o resulta da consulta
+            query = query.AsNoTracking().Where(e => e.UserId == userId).OrderBy(e => e.Id);
 
             return await query.ToArrayAsync();
         }
 
-        public async Task<Evento[]> GetAllEventosByTemaAsync(string tema, bool includePalestrante = false)
+        public async Task<Evento[]> GetAllEventosByTemaAsync(int userId, string tema, bool includePalestrante = false)
         {
             IQueryable<Evento> query = _context.Eventos.Include(e => e.Lote).Include(e => e.RedesSociais);
 
@@ -45,12 +46,15 @@ namespace ProEventos.Persistence
                 query = query.Include(e => e.PalestrantesEventos).ThenInclude(pe => pe.Palestrante);
             }
 
-            query = query.OrderBy(e => e.Id).Where(e => e.Tema.ToLower().Contains(tema.ToLower()));
+            query = query.AsNoTracking()
+                .OrderBy(e => e.Id)
+                .Where(e => e.Tema.ToLower().Contains(tema.ToLower()) 
+                && e.UserId == userId);
 
             return await query.ToArrayAsync();
         }
 
-        public async Task<Evento> GetEventosByIdAsync(int eventoId, bool includePalestrante = false)
+        public async Task<Evento> GetEventosByIdAsync(int userId, int eventoId, bool includePalestrante = false)
         {
             IQueryable<Evento> query = _context.Eventos.Include(e => e.Lote).Include(e => e.RedesSociais);
 
@@ -59,7 +63,7 @@ namespace ProEventos.Persistence
                 query = query.Include(e => e.PalestrantesEventos).ThenInclude(pe => pe.Palestrante);
             }
 
-            query = query.OrderBy(e => e.Id).Where(e => e.Id == eventoId);
+            query = query.AsNoTracking().OrderBy(e => e.Id).Where(e => e.Id == eventoId && e.UserId == userId);
 
             return await query.FirstOrDefaultAsync();
         }

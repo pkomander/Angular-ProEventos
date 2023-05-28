@@ -1,19 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using ProEventos.Application;
 using ProEventos.Application.Contratos;
 using ProEventos.Application.Dtos;
 using ProEventos.Domain;
 using ProEventos.Persistence.Context;
+using ProEventosAPI.Extensions;
 
 namespace ProEventosAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class EventoController : ControllerBase
     {
         private readonly IEventosService _eventosService;
-        public EventoController(IEventosService eventosService)
+        private readonly IAccountService _accountService;
+        public EventoController(IEventosService eventosService, IAccountService accountService)
         {
             _eventosService = eventosService;
+            _accountService = accountService;
         }
 
         [HttpGet]
@@ -21,7 +27,7 @@ namespace ProEventosAPI.Controllers
         {
             try
             {
-                var eventos = await _eventosService.GetAllEventosAsync(true);
+                var eventos = await _eventosService.GetAllEventosAsync(User.GetUserId(), true);
 
                 if(eventos == null)
                 {
@@ -41,7 +47,7 @@ namespace ProEventosAPI.Controllers
         {
             try
             {
-                var evento = await _eventosService.GetEventosByIdAsync(id, true);
+                var evento = await _eventosService.GetEventosByIdAsync(User.GetUserId(), id, true);
 
                 if (evento == null)
                 {
@@ -60,7 +66,7 @@ namespace ProEventosAPI.Controllers
         {
             try
             {
-                var evento = await _eventosService.GetAllEventosByTemaAsync(tema, true);
+                var evento = await _eventosService.GetAllEventosByTemaAsync(User.GetUserId(), tema, true);
 
                 if (evento == null)
                 {
@@ -80,7 +86,7 @@ namespace ProEventosAPI.Controllers
 
             try
             {
-                var evento = await _eventosService.AddEventos(model);
+                var evento = await _eventosService.AddEventos(User.GetUserId(), model);
 
                 if (evento == null)
                 {
@@ -99,7 +105,7 @@ namespace ProEventosAPI.Controllers
         {
             try
             {
-                var evento = await _eventosService.UpdateEvento(id, model);
+                var evento = await _eventosService.UpdateEvento(User.GetUserId(), id, model);
 
                 if (evento == null)
                 {
@@ -118,7 +124,7 @@ namespace ProEventosAPI.Controllers
         {
             try
             {
-                var evento = await _eventosService.DeleteEvento(id);
+                var evento = await _eventosService.DeleteEvento(User.GetUserId(), id);
 
                 if (evento == false)
                 {

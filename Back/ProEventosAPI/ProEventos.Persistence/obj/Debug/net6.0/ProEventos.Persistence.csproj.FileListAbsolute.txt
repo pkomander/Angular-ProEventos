@@ -1,4 +1,5 @@
 D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Debug\net6.0\ProEventos.Persistence.deps.json
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Debug\net6.0\ProEventos.Persistence.runtimeconfig.json
 D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Debug\net6.0\ProEventos.Persistence.dll
 D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Debug\net6.0\ProEventos.Persistence.pdb
 D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Debug\net6.0\ProEventos.Domain.dll
@@ -12,6 +13,5 @@ D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Debug\net6.0\ProEven
 D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Debug\net6.0\ProEventos.Persistence.dll
 D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Debug\net6.0\refint\ProEventos.Persistence.dll
 D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Debug\net6.0\ProEventos.Persistence.pdb
-D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Debug\net6.0\ref\ProEventos.Persistence.dll
-D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\bin\Debug\net6.0\ProEventos.Persistence.runtimeconfig.json
 D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Debug\net6.0\ProEventos.Persistence.genruntimeconfig.cache
+D:\ProEventos\Back\ProEventosAPI\ProEventos.Persistence\obj\Debug\net6.0\ref\ProEventos.Persistence.dll
